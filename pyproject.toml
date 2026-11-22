@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-document-utilities"
+version = "1.0.0"
+description = "High-throughput, offline PDF manipulation tools for merging, splitting, metadata scrubbing, watermarking, encryption, and extraction."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Abdelrahman Abouzed" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pypdf>=3.0.0",
+]
+
+[project.scripts]
+pdf-tools-cli = "pdf_document_utilities.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
