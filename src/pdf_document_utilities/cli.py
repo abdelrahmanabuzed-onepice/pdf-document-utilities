@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+_s = str(Path(__file__).resolve().parent.parent)
+if _s not in sys.path:
+    sys.path.insert(0, _s)
+
 """Unified Command Line Interface dispatcher for PDF Document Utilities."""
 
 import argparse
